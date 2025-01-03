@@ -1,6 +1,7 @@
 import React from "react";
 import yellowCar from "../../assets/website/team.png";
 
+
 const Hero = () => {
   return (
     <div className="dark:bg-gray-950 dark:text-white duration-300 ">
@@ -46,7 +47,7 @@ const Hero = () => {
               data-aos-offset="0"
               className="primary-btn"
             >
-              Learn More
+              Get Started
             </button>
           </div>
         </div>

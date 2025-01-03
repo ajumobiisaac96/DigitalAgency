@@ -58,7 +58,7 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <button className="primary-btn">Get in Touch</button>
+              <button className="primary-btn">Get Started</button>
               <DarkMode />
             </ul>
           </nav>
