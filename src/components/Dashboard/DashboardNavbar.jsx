@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Vector from '../../assets/website/Vector.png'
 
 const DashboardNavbar = ({ username }) => {
   const navbarStyle = {
@@ -16,7 +17,11 @@ const DashboardNavbar = ({ username }) => {
   };
 
   const logoStyle = {
+    width : '190px',
+    justifyContent : 'space-between',
+    display : 'flex',
     fontSize: '24px',
+    fontWeight: '600',
     textDecoration: 'none',
     color: 'black',
   };
@@ -39,7 +44,8 @@ const DashboardNavbar = ({ username }) => {
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
           <div className="logo">
             <Link to="/" style={logoStyle}>
-              <h1>MonetizeHub</h1>
+            <img src= {Vector} alt="" />
+            <h1>Digital Agency</h1>
             </Link>
           </div>
           <div className="welcome-message" style={welcomeMessageStyle}>

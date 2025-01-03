@@ -1,10 +1,17 @@
 import React from 'react'
 import DashboardNavbar from './DashboardNavbar'
+import Sidebar from './Sidebar'
 
-const Dashboard = () => {
+const  Dashboard = () => {
+
+  const dashboardArrangment = {
+      
+  }
+
   return (
-    <div>
+    <div style={dashboardArrangment}>
       <DashboardNavbar/>
+      <Sidebar/>
     </div>
   )
 }

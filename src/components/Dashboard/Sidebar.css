@@ -1,0 +1,207 @@
+/* General styles for the sidebar */
+
+.side-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sidebar-info {
+    width: 100px;
+    margin-left: -10px !important;
+    padding: 20px;
+    background: #f8f9fa;
+    height: 90vh;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1); /* Add box shadow to the right */
+    transition: transform 0.3s ease; /* Smooth transition for showing/hiding */
+}
+
+.sidebar-info h3 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sidebar-info h3:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #2957ec, #c0c7e6);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100; /* Ensure it stays on top of the sidebar */
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-internal-info {
+    margin-left: 320px !important; /* Adjust margin to position beside the sidebar-info */
+}
+
+.user-stat h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.engagement-score h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.revenue-gen h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.profile h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* Media Queries */
+
+/* Extra small devices (phones, 0px to 575px) */
+@media (max-width: 575px) {
+    .sidebar-info {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        background-color: #f8f9fa;
+        margin-left: 0;
+        z-index: 1000;
+        box-shadow: none;
+        transform: translateX(-100%); /* Hide sidebar by default */
+    }
+
+    .sidebar-info.open {
+        transform: translateX(0); /* Show sidebar when open */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+        top: 60px; /* Position it under the navbar */
+    }
+    .dashboard-internal-info {
+        margin-left: 20px !important; /* Adjust margin to position beside the sidebar-info */
+    }
+
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .sidebar-info {
+        width: 250px;
+        height: auto;
+        position: fixed;
+        margin-left: 0;
+        box-shadow: none;
+        transform: translateX(-100%); /* Hide sidebar by default */
+    }
+
+    .sidebar-info.open {
+        transform: translateX(0); /* Show sidebar when open */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+        top: 60px; /* Position it under the navbar */
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .sidebar-info {
+        width: 250px;
+        height: auto;
+        position: fixed;
+        margin-left: 0;
+        box-shadow: none;
+        z-index: 1000;
+        transform: translateX(-100%); /* Hide sidebar by default */
+    }
+
+    .sidebar-info.open {
+        transform: translateX(0); /* Show sidebar when open */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on medium screens */
+        top: 90px; /* Position it under the navbar */
+    }
+
+    .dashboard-internal-info {
+        margin-top: -10px !important;
+        margin-left: 100px !important; /* Adjust margin to position beside the sidebar-info */
+    }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar-info {
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        margin-left: 110px;
+        box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+        transform: translateX(0); /* Always show sidebar */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger on large screens */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .sidebar-info {
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        margin-left: 110px;
+        box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+        transform: translateX(0); /* Always show sidebar */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger on extra large screens */
+    }
+}
+
+/* Additional styles for the dashboard internal info */
+.dashboard-internal-info {
+    margin-left: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.dashboard-internal-info .user-stat, .engagement-score, .revenue-gen, .profile {
+    margin-top: 20px;
+}
+
+.dashboard-internal-info .user-stat, .engagement-score, .revenue-gen, .profile p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import yellowCar from "../../assets/website/team.png";
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -41,14 +42,14 @@ const Hero = () => {
               solutions that drive results and elevate your brand to new
               heights.
             </p>
-            <button
+            <Link to={'/Signup'} ><button
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-offset="0"
               className="primary-btn"
             >
               Get Started
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,181 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    height: 100vh;
+}
+
+.signup-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px !important;
+    margin-top: -40px !important;
+    margin-bottom: 0;
+    height: 100vh;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.form span {
+    color: #2957ec;
+}
+
+.signup-page .form h1 {
+    font-family: 'poppins';
+    font-size: 40px;
+    letter-spacing: 5px;
+
+}
+
+.signup-page .form .row-1 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2957ec;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup-page .form h6 {
+    font-family: 'poppins';
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form button:hover {
+    background-color: #fff;
+    color: #2957ec;
+    border: 1px solid #2957ec;
+    transition: 0.5s;
+}
+
+.signup-img img {
+    width: 500px;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 0px to 575px) */
+@media (max-width: 575px) {
+    .signup-page {
+        padding: 10px;
+    }
+
+    .form {
+        padding: 15px;
+    }
+
+    .signup-img img {
+        display: none;
+    }
+
+    .signup-page {
+        flex-direction: column;
+        margin-top: -60px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .signup-page {
+        padding: 15px;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .signup-img img {
+        display: none;
+    }
+
+    .signup-page {
+        flex-direction: column;
+        margin-top: -60px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .signup-page {
+        padding: 20px;
+    }
+
+    .form {
+        padding: 25px;
+    }
+
+    .signup-img img {
+        display: none;
+    }
+
+    .signup-page {
+        flex-direction: column;
+        margin-top: -200px;
+    }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .signup-page {
+        padding: 30px;
+    }
+
+    .form {
+        padding: 30px;
+    }
+
+    .signup-page {
+        flex-direction: column;
+        margin-top: -20px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .signup-page {
+        padding: 40px;
+    }
+
+    .form {
+        padding: 40px;
+    }
+
+    .signup-page {
+        flex-direction: column;
+        margin-top: -20px;
+    }
+}

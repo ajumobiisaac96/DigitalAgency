@@ -3,6 +3,7 @@ import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
 import Logo from "../../assets/website/Vector.svg";
 import DarkMode from "./DarkMode";
+import { Link } from "react-router-dom";
 
 export const MenuLinks = [
   {
@@ -35,16 +36,15 @@ const Navbar = () => {
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
           {/* Logo section */}
-          <a
+          <Link to={'./'} ><a
             target="_blank"
-            href="https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ?sub_confirmation=1"
             className="flex items-center gap-3"
           >
             <img src={Logo} alt="" className="w-5" />
             <span className="text-2xl sm:text-3xl font-semibold">
               Digital agency
             </span>
-          </a>
+          </a> </Link>
           {/* Desktop view Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
@@ -58,7 +58,7 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <button className="primary-btn">Get Started</button>
+              <Link to={'./Signup'} ><button className="primary-btn">Get Started</button></Link>
               <DarkMode />
             </ul>
           </nav>
